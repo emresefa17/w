@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demet Ayaz - Eğitimler</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/mobile-menu.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/aptly">
+    <style>
+        body, p, div {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+        h1, h2, h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+        .font-medium, button, .nav-link, .btn {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+        }
+        
+        /* Dropdown menu styles */
+        .dropdown-menu {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu,
+        .dropdown-menu.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        
+        .dropdown-trigger:focus + .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        
+        /* Training section styles */
+        .training-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .training-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .training-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .training-card:hover .training-icon {
+            transform: scale(1.1);
+        }
+        
+        .feature-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .feature-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #3B82F6;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Header/Navigation -->
+    <header class="bg-white fixed top-0 left-0 right-0 z-50 flex items-center">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="Logo" class="logo-image h-32 w-47">
+            </a>
+            
+            <!-- Main Navigation -->
+            <nav class="hidden lg:flex space-x-8">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="hakkimda.html" class="nav-link">Hakkımda</a>
+                
+                <!-- Dropdown for Hizmetlerimiz -->
+                <div class="relative nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger flex items-center">
+                        Hizmetlerimiz
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu absolute bg-white shadow-lg rounded-md mt-2 py-2 w-56 z-50">
+                        <a href="yonetim-danismanligi.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Yönetim Danışmanlığı</a>
+                        <a href="egitimler.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Eğitimler</a>
+                        <a href="gonullu-calismalar.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Gönüllü Çalışmalar</a>
+                    </div>
+                </div>
+                
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="iletisim.html" class="nav-link">İletişim</a>
+            </nav>
+            
+            <!-- Right Side Icons - Language Selection -->
+            <div class="flex items-center space-x-6">
+                <!-- Mobile Menu Button - Only visible on mobile -->
+                <button class="block lg:hidden header-icon" aria-label="Toggle mobile menu" type="button" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Training Section -->
+    <section class="bg-white pt-28 pb-20">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <!-- Header -->
+            <div class="mb-16 animate-section animate-fade">
+                <h1 class="text-4xl font-bold text-gray-800 mb-6">Eğitimler</h1>
+                <p class="text-lg text-gray-700 leading-relaxed max-w-4xl">
+                    Teoriden çok pratiğe dayanan, sahadaki gerçek deneyimlerle zenginleştirilmiş interaktif eğitimler sunuyorum. Katılımcıların gerçek sorunlarına çözüm üretmelerini sağlayan, bilgi aktarımının ötesine geçen bir yaklaşım benimsiyorum.
+                </p>
+            </div>
+            
+            <!-- Training List Section -->
+            <div id="trainings" class="mb-16">
+                <h2 class="text-2xl font-bold text-gray-800 mb-10 animate-section animate-fade animate-delay-300">Verdiğim Başlıca Eğitim Konuları</h2>
+                
+                <!-- Training List - Professional Style -->
+                <div style="zoom: 90%;" class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden animate-section animate-fade animate-delay-400">
+                    <!-- Training 1 -->
+                    <div class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="bg-blue-50 rounded-full p-3 mr-5 flex-shrink-0">
+                                    <i class="fas fa-shield-alt text-blue-600 text-lg"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Tedarik Zincirinde Risk Yönetimi ve Kriz Senaryoları</h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Tedarik zincirinizdeki potansiyel riskleri belirleyip, kriz durumlarında uygulanabilecek stratejiler geliştirmeyi öğrenin.
+                                    </p>
+                                </div>
+                                <div class="ml-4">
+                                    <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors">
+                                        
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Training 2 -->
+                    <div class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="bg-blue-50 rounded-full p-3 mr-5 flex-shrink-0">
+                                    <i class="fas fa-truck text-blue-600 text-lg"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">3PL Seçimi ve Yönetimi</h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Doğru lojistik iş ortağını seçme kriterleri, sözleşme yönetimi ve sürdürülebilir iş ilişkileri kurma stratejileri.
+                                    </p>
+                                </div>
+                                <div class="ml-4">
+                                    <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors">
+                                        
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Training 3 -->
+                    <div class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="bg-blue-50 rounded-full p-3 mr-5 flex-shrink-0">
+                                    <i class="fas fa-shopping-cart text-blue-600 text-lg"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">E-Ticaret Operasyonları Kurulumu</h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Sipariş yönetimi, depolama, paketleme ve sevkiyat süreçlerini optimize eden e-ticaret operasyon sistemleri tasarlama.
+                                    </p>
+                                </div>
+                                <div class="ml-4">
+                                    <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors">
+                                        
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Training 4 -->
+                    <div class="border-b border-gray-200 hover:bg-gray-50 transition-colors">
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="bg-blue-50 rounded-full p-3 mr-5 flex-shrink-0">
+                                    <i class="fas fa-cogs text-blue-600 text-lg"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Lojistik Süreç İyileştirme Teknikleri</h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Lean, Six Sigma ve diğer iyileştirme metodolojilerini kullanarak lojistik süreçlerinizi optimize etmeyi öğrenin.
+                                    </p>
+                                </div>
+                                <div class="ml-4">
+                                    <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors">
+                                        
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Training 5 -->
+                    <div class="hover:bg-gray-50 transition-colors">
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="bg-blue-50 rounded-full p-3 mr-5 flex-shrink-0">
+                                    <i class="fas fa-users text-blue-600 text-lg"></i>
+                                </div>
+                                <div class="flex-grow">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">Satış Kanalları ve Müşteri Deneyimi Yönetimi</h3>
+                                    <p class="text-gray-600 leading-relaxed">
+                                        Çok kanallı satış stratejileri oluşturma ve müşteri yolculuğunun her adımında mükemmel deneyim tasarlama.
+                                    </p>
+                                </div>
+                                <div class="ml-4">
+                                    <a href="#" class="inline-flex items-center text-blue-600 font-medium hover:text-blue-800 transition-colors">
+                                        
+                                        
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Training Methods Section -->
+            <div class="mb-16 bg-gray-50 rounded-xl p-8 shadow-md animate-section animate-fade animate-delay-900">
+                <h2 class="text-2xl font-bold text-gray-800 mb-6">Eğitim Metodolojimiz</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Method 1 -->
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="text-blue-600 text-3xl mb-4">
+                            <i class="fas fa-briefcase"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-3">Vaka Analizleri</h3>
+                        <p class="text-gray-600">
+                            Gerçek dünya senaryolarını analiz ederek teorik bilgileri pratiğe dönüştürme fırsatı sunuyoruz.
+                        </p>
+                    </div>
+                    
+                    <!-- Method 2 -->
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="text-blue-600 text-3xl mb-4">
+                            <i class="fas fa-hands-helping"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-3">Uygulamalı Egzersizler</h3>
+                        <p class="text-gray-600">
+                            Katılımcılar öğrendiklerini interaktif aktiviteler ve simülasyonlarla pekiştiriyor.
+                        </p>
+                    </div>
+                    
+                    <!-- Method 3 -->
+                    <div class="bg-white rounded-lg p-6 shadow-sm">
+                        <div class="text-blue-600 text-3xl mb-4">
+                            <i class="fas fa-user-check"></i>
+                        </div>
+                        <h3 class="font-bold text-lg mb-3">Katılımcı Odaklı İçerik</h3>
+                        <p class="text-gray-600">
+                            Her eğitim grubunun özel ihtiyaçlarına göre uyarlanmış içeriklerle maksimum fayda sağlıyoruz.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Training Features Section -->
+            <div class="mb-16 animate-section animate-fade animate-delay-1000">
+                <div class="flex flex-col md:flex-row bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="md:w-1/2 p-8 md:p-10">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-6">Eğitimlerimizin Özellikleri</h2>
+                        
+                        <ul class="feature-list text-gray-700 space-y-4">
+                            <li>Sektör spesifik örnekler ve uygulamalar</li>
+                            <li>Küçük gruplarla kişiselleştirilmiş öğrenme deneyimi</li>
+                            <li>Eğitim sonrası 30 gün destek ve danışmanlık</li>
+                            <li>Kapsamlı eğitim materyalleri ve kaynaklar</li>
+                            <li>Networking fırsatları ve sektör profesyonelleriyle tanışma</li>
+                            <li>Uygulamaya yönelik araçlar ve şablonlar</li>
+                            <li>Katılım sertifikası</li>
+                        </ul>
+                    </div>
+                    <div class="md:w-1/2 bg-gray-100">
+                        <img src="images/eğitim.jpg" alt="Eğitim Özellikleri" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Testimonials -->
+           
+            
+            <!-- CTA Section -->
+            <div class="bg-gradient-to-r from-blue-600 to-indigo-700 rounded-xl shadow-lg p-8 md:p-10 text-white text-center animate-section animate-fade animate-delay-1200">
+                <h2 class="text-3xl font-bold mb-4">Özel Eğitim Programı mı Arıyorsunuz?</h2>
+                <p class="text-blue-100 mb-8 max-w-3xl mx-auto">
+                    Kurumunuzun ihtiyaçlarına özel tasarlanmış eğitim programları için benimle iletişime geçin. Ekibinizin becerilerini geliştirmek için birlikte çalışalım.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <a href="mailto:Ayazd@mef.edu.tr" class="bg-white text-blue-600 font-medium py-3 px-6 rounded-full hover:bg-blue-50 transition-colors">
+                        İletişime Geç
+                    </a>
+                  
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Footer Section -->
+   <footer style="zoom: 0.8; background-color: #CCDDEA;" class="text-gray-800 py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Column 1: About & Contact -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <!-- LOGO KALDIRILDI -->
+                    <span style="font-family: 'Aptly', 'Aptly Bold', sans-serif; font-weight: 700;" class="text-xl">Demet Ayaz</span>
+                </div>
+                <p style="font-family: 'Roboto', sans-serif; font-weight: 400;" class="text-gray-700 mb-4">
+                    Tedarik zinciri ve lojistik alanında uzman danışmanlık ve eğitim hizmetleri.
+                </p>
+            </div>
+            
+            <!-- Column 2: Services -->
+            <div>
+                <h3 style="font-family: 'Roboto', sans-serif; font-weight: 700;" class="text-lg mb-6 text-gray-900">Hizmetlerimiz</h3>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="yonetim-danismanligi.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            Yönetim Danışmanlığı
+                        </a>
+                    </li>
+                    <li>
+                        <a href="egitimler.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            Eğitimler
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gonullu-calismalar.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            Gönüllü Çalışmalar
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Column 3: Quick Links -->
+            <div>
+                <h3 style="font-family: 'Roboto', sans-serif; font-weight: 700;" class="text-lg mb-6 text-gray-900">Hızlı Bağlantılar</h3>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="hakkimda.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            Hakkımda
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">Blog</a>
+                    </li>
+                    <li>
+
+                        <a href="iletisim.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            İletişim
+                        </a>
+                    </li>
+                   </ul>
+            </div>
+            
+            <!-- İletişim (Sosyal Medya yerine) -->
+            <div>
+                <h4 style="font-family: 'Roboto', sans-serif; font-weight: 500;" class="text-gray-900 mb-3">İletişim</h4>
+                <div class="flex flex-col space-y-2">
+                    <a href="mailto:Ayazd@mef.edu.tr" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                        <i class="fas fa-envelope mr-2 text-blue-600"></i> Ayazd@mef.edu.tr
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                        <i class="fas fa-map-marker-alt mr-2 text-blue-600"></i> İstanbul
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="border-t border-gray-400 mt-10 pt-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p style="font-family: 'Roboto', sans-serif; font-weight: 400;" class="text-gray-700 text-sm text-center w-full">
+                    &copy; 2025 Demet Ayaz. Tüm hakları saklıdır.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script>
+        // Scroll animation script
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.animate-section');
+            
+            // Initial check on page load
+            checkSections();
+            
+            // Check sections on scroll
+            window.addEventListener('scroll', checkSections);
+            
+            function checkSections() {
+                const triggerBottom = window.innerHeight * 0.85;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    
+                    if (sectionTop < triggerBottom) {
+                        section.classList.add('visible');
+                    } else {
+                        // Optional: remove the class if you want elements to animate again when scrolling back up
+                        // section.classList.remove('visible');
+                    }
+                });
+            }
+            
+            // Make dropdown menu work with clicks as well
+            const dropdownTrigger = document.querySelector('.dropdown-trigger');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const navDropdown = document.querySelector('.nav-dropdown');
+            
+            if (dropdownTrigger && dropdownMenu) {
+                // Toggle dropdown on click
+                dropdownTrigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdownMenu.classList.toggle('active');
+                });
+                
+                // Close the dropdown when clicking outside of the dropdown area
+                document.addEventListener('click', function(e) {
+                    if (!navDropdown.contains(e.target)) {
+                        dropdownMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+<script src="js/mobile-menu.js" defer></script>
+</html>

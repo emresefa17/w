@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gıda Mikro Dağıtımında AI ve IoT İle Maksimum Verimlilik</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/aptly">
+    <style>
+        .dropdown-menu { display: none; opacity: 0; transform: translateY(-10px); transition: opacity 0.3s, transform 0.3s; pointer-events: none; }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown:hover .dropdown-menu, .dropdown-menu.active { display: block; opacity: 1; transform: translateY(0); pointer-events: auto; }
+        .dropdown-trigger:focus + .dropdown-menu { display: block; opacity: 1; transform: translateY(0); pointer-events: auto; }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white fixed top-0 left-0 right-0 z-50 flex items-center">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="Logo" class="logo-image h-32 w-47">
+            </a>
+            <nav class="hidden lg:flex space-x-8">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="hakkimda.html" class="nav-link">Hakkımda</a>
+                <div class="relative nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger flex items-center">Hizmetlerimiz
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
+                    </a>
+                    <div class="dropdown-menu absolute bg-white shadow-lg rounded-md mt-2 py-2 w-56 z-50">
+                        <a href="yonetim-danismanligi.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Yönetim Danışmanlığı</a>
+                        <a href="egitimler.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Eğitimler</a>
+                        <a href="gonullu-calismalar.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Gönüllü Çalışmalar</a>
+                    </div>
+                </div>
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="iletisim.html" class="nav-link">İletişim</a>
+            </nav>
+            <div class="flex items-center space-x-6">
+                <button class="block lg:hidden header-icon" aria-label="Toggle mobile menu" type="button" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="flex-1 pt-32 pb-12">
+        <div class="container mx-auto px-6 max-w-3xl bg-white rounded-xl shadow-md p-0">
+            <img src="images/blog2.png" alt="E-Ticaret Lojistiği" class="w-full h-64 object-cover rounded-t-xl mb-4 mt-0">
+            <div class="p-8">
+                <div class="mb-6">
+                    <span class="text-sm text-blue-600 font-medium mr-4">E-Ticaret</span>
+                    <span class="text-sm text-gray-500">14 Ekim 2023</span>
+                </div>
+                <h1 class="text-3xl font-bold mb-4 text-gray-800">Gıda Mikro Dağıtımında AI ve IoT İle Maksimum Verimlilik</h1>
+                <p class="text-lg text-gray-700 mb-6">Gıda sektöründe mikro dağıtım yapan firmalar, AI ve IoT çözümlerini entegre ederek ürünlerini daha verimli, hızlı ve güvenli bir şekilde ulaştırabiliyor. Bu teknolojiler sayesinde, dağıtım planlaması anlık trafik, hava durumu, talep yoğunluğu gibi değişkenlere göre optimize ediliyor. Örneğin, yapay zeka destekli rota planlaması ile %30'a kadar daha kısa teslimat süreleri sağlanabiliyor!</p>
+                <p class="text-lg text-gray-700 mb-6">Bu yaklaşımla, teslimat sürelerinin kısalması, operasyonel maliyetlerin düşmesi ve enerji tüketiminin azalması gibi faydalar sağlayan IoT cihazları, dağıtım sırasında sıcaklık kontrolü ve ürün takibi sağlayarak gıda güvenliğini artırırken aynı zamanda tüketicilere taze ürünler ulaştırılmasını sağlıyor.</p>
+                <p class="text-lg text-gray-700 mb-6">Gelecek, mikro dağıtımda akıllı çözümlerle şekilleniyor!</p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">#GıdaDağıtımı</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">#YapayZeka</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">#IoT</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">#SürdürülebilirLojistik</span>
+                    <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-medium">#AkıllıLojistik</span>
+                </div>
+                <a href="blog.html" class="inline-block mt-4 text-blue-600 font-medium hover:underline">← Tüm Bloglara Dön</a>
+            </div>
+        </div>
+    </main>
+    <script src="js/mobile-menu.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const dropdownTrigger = document.querySelector('.dropdown-trigger');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const navDropdown = document.querySelector('.nav-dropdown');
+            if (dropdownTrigger && dropdownMenu) {
+                dropdownMenu.classList.remove('active');
+                dropdownMenu.style.display = '';
+                dropdownTrigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdownMenu.classList.toggle('active');
+                });
+                document.addEventListener('click', function(e) {
+                    if (!navDropdown.contains(e.target)) {
+                        dropdownMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

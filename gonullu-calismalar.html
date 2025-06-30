@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demet Ayaz - Gönüllü Çalışmalar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/aptly">
+    <style>
+        body, p, div {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+        h1, h2, h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+        .font-medium, button, .nav-link, .btn {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+        }
+        
+        /* Dropdown menu styles */
+        .dropdown-menu {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu,
+        .dropdown-menu.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        
+        .dropdown-trigger:focus + .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white fixed top-0 left-0 right-0 z-50 flex items-center">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="Logo" class="logo-image h-32 w-47">
+            </a>
+            
+            <!-- Main Navigation -->
+          <!-- Main Navigation -->
+            <nav class="hidden lg:flex space-x-8">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="hakkimda.html" class="nav-link">Hakkımda</a>
+                
+                <!-- Dropdown for Hizmetlerimiz -->
+                <div class="relative nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger flex items-center">
+                        Hizmetlerimiz
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu absolute bg-white shadow-lg rounded-md mt-2 py-2 w-56 z-50">
+                        <a href="yonetim-danismanligi.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Yönetim Danışmanlığı</a>
+                        <a href="egitimler.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Eğitimler</a>
+                        <a href="gonullu-calismalar.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Gönüllü Çalışmalar</a>
+                    </div>
+                </div>
+                
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="iletisim.html" class="nav-link">İletişim</a>
+            </nav>
+            
+            <!-- Right Side Icons - Language Selection -->
+            <div class="flex items-center space-x-6">
+                <!-- Mobile Menu Button - Only visible on mobile -->
+                <button class="block lg:hidden header-icon" aria-label="Toggle mobile menu" type="button" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="pt-20">
+        <!-- Project Section -->
+        <section style="zoom: 85%;" class="py-16">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto bg-white rounded-xl shadow-md overflow-hidden">
+                    <div class="p-8">
+                        <h1 class="text-3xl font-bold text-gray-800 mb-6 text-center">Gönüllü Çalışmalarım</h1>
+                        <div class="mb-8">
+                            <img src="images/gonullu.jpg" 
+                                alt="Kadın Girişimciler Eğitimi" 
+                                class="w-full h-64 object-cover rounded-lg mb-6">
+                            <h2 class="text-2xl font-bold text-gray-800 mb-4">Kadın Girişimciler için Mikro Tedarik Zinciri Eğitimi</h2>
+                        </div>
+                        
+                        <div class="prose max-w-none">
+                            <p class="text-gray-600 text-lg mb-6">
+                                Kadın girişimcilerin iş süreçlerini daha verimli hâle getirebilmeleri için geliştirdiğim Mikro Tedarik Zinciri Eğitimi, girişimcilik yolculuklarında onlara stratejik rehberlik sunmayı hedefliyor. Eğitim, tedarik zincirinin her aşamasında yerel kaynakları etkin kullanmak, sürdürülebilirliği artırmak ve operasyonel verimliliği sağlamaya odaklanıyor. Hedefim, Kadın girişimcilerin güçlü ve sürdürülebilir bir tedarik zinciri yönetimi kurmalarına yardımcı olmak ve iş süreçlerini optimize etmelerini sağlamaktır.
+                            </p>
+
+                            <div class="grid md:grid-cols-2 gap-6 mt-8">
+                                <div class="bg-blue-50 p-6 rounded-lg">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-4">Eğitim İçeriği</h3>
+                                    <ul class="space-y-3 text-gray-600">
+                                        <li class="flex items-start">
+                                            <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            Temel tedarik zinciri kavramları
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            Yerel tedarikçi ağı oluşturma
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            Stok yönetimi ve optimizasyonu
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            Sürdürülebilir tedarik stratejileri
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <div class="bg-blue-50 p-6 rounded-lg">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-4">Kazanımlar</h3>
+                                    <ul class="space-y-3 text-gray-600">
+                                        <li class="flex items-start">
+                                            <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            Operasyonel verimlilik artışı
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            Maliyet optimizasyonu
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            Sürdürülebilir iş modeli
+                                        </li>
+                                        <li class="flex items-start">
+                                            <svg class="h-6 w-6 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                                            </svg>
+                                            Rekabet avantajı
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="mt-8 text-center">
+                                <a href="mailto:Ayazd@mef.edu.tr" class="inline-block bg-blue-600 text-white px-8 py-3 rounded-md hover:bg-blue-700 transition-colors font-medium">
+                                    Detaylı Bilgi Al
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer style="zoom: 0.8; background-color: #CCDDEA;" class="text-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1: About & Contact -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <!-- LOGO KALDIRILDI -->
+                        <span style="font-family: 'Aptly', 'Aptly Bold', sans-serif; font-weight: 700;" class="text-xl">Demet Ayaz</span>
+                    </div>
+                    <p style="font-family: 'Roboto', sans-serif; font-weight: 400;" class="text-gray-700 mb-4">
+                        Tedarik zinciri ve lojistik alanında uzman danışmanlık ve eğitim hizmetleri.
+                    </p>
+                </div>
+                
+                <!-- Column 2: Services -->
+                <div>
+                    <h3 style="font-family: 'Roboto', sans-serif; font-weight: 700;" class="text-lg mb-6 text-gray-900">Hizmetlerimiz</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="yonetim-danismanligi.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                Yönetim Danışmanlığı
+                            </a>
+                        </li>
+                        <li>
+                            <a href="egitimler.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                Eğitimler
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gonullu-calismalar.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                Gönüllü Çalışmalar
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Quick Links -->
+                <div>
+                    <h3 style="font-family: 'Roboto', sans-serif; font-weight: 700;" class="text-lg mb-6 text-gray-900">Hızlı Bağlantılar</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="hakkimda.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                Hakkımda
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">Blog</a>
+                        </li>
+                        <li>
+
+                            <a href="iletisim.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                İletişim
+                            </a>
+                        </li>
+                       </ul>
+                </div>
+                
+                <!-- İletişim (Sosyal Medya yerine) -->
+                <div>
+                    <h4 style="font-family: 'Roboto', sans-serif; font-weight: 500;" class="text-gray-900 mb-3">İletişim</h4>
+                    <div class="flex flex-col space-y-2">
+                        <a href="mailto:Ayazd@mef.edu.tr" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            <i class="fas fa-envelope mr-2 text-blue-600"></i> Ayazd@mef.edu.tr
+                        </a>
+                        <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-600"></i> İstanbul
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-400 mt-10 pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p style="font-family: 'Roboto', sans-serif; font-weight: 400;" class="text-gray-700 text-sm text-center w-full">
+                        &copy; 2025 Demet Ayaz. Tüm hakları saklıdır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+<script src="js/mobile-menu.js" defer></script>
+</html>

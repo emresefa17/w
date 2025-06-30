@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demet Ayaz - Hakkımda</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/mobile-menu.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/aptly">
+    <style>
+        body, p, div {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+        h1, h2, h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+        .font-medium, button, .nav-link, .btn {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+        }
+        
+        /* Dropdown menu styles */
+        .dropdown-menu {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu,
+        .dropdown-menu.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        
+        .dropdown-trigger:focus + .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Header/Navigation -->
+    <header class="bg-white fixed top-0 left-0 right-0 z-50 flex items-center">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="Logo" class="logo-image h-32 w-47">
+            </a>
+            
+           <!-- Main Navigation -->
+            <nav class="hidden lg:flex space-x-8">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="hakkimda.html" class="nav-link">Hakkımda</a>
+                
+                <!-- Dropdown for Hizmetlerimiz -->
+                <div class="relative nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger flex items-center">
+                        Hizmetlerimiz
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu absolute bg-white shadow-lg rounded-md mt-2 py-2 w-56 z-50">
+                        <a href="yonetim-danismanligi.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Yönetim Danışmanlığı</a>
+                        <a href="egitimler.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Eğitimler</a>
+                        <a href="gonullu-calismalar.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Gönüllü Çalışmalar</a>
+                    </div>
+                </div>
+                
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="iletisim.html" class="nav-link">İletişim</a>
+            </nav>
+            
+            <!-- Right Side Icons - Language Selection -->
+            <div class="flex items-center space-x-6">
+                <!-- Mobile Menu Button -->
+                <button class="block lg:hidden header-icon" aria-label="Toggle mobile menu" type="button" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Me Content Section -->
+    <section class="bg-white animate-section animate-fade pt-28 pb-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h1 class="text-4xl font-bold text-gray-800 mb-10 animate-section animate-fade animate-delay-200">Hakkımda</h1>
+            
+            <!-- Introduction with image -->
+            <div class="flex flex-col lg:flex-row gap-8 mb-12 animate-section animate-fade animate-delay-400">
+                <!-- Profile Image -->
+                <div class="lg:w-1/3">
+                    <div class="rounded-lg overflow-hidden shadow-lg">
+                        <img src="images/hakkımda.jpg" 
+                            alt="Demet Ayaz" class="w-full h-auto">
+                    </div>
+                </div>
+                
+                <!-- Introduction Text -->
+                <div class="lg:w-2/3">
+                    <p class="text-lg leading-relaxed text-gray-700 mb-6">
+                        Merhaba, ben <span class="font-bold">Demet Ayaz</span>. Tedarik zinciri, lojistik ve operasyon yönetiminde <span class="text-blue-600 font-bold">20 yılı aşkın</span> bir kariyere sahip olarak, <span class="font-medium">Bella Maison, Reysaş Lojistik ve Yurtiçi Kargo</span> gibi sektörün önde gelen kuruluşlarında edindiğim kapsamlı yöneticilik deneyimini, şimdi stratejik yönetim danışmanlığı ve uygulamaya dönük eğitimlerle kurumların büyüme potansiyellerini hayata geçirmelerine odaklanarak değerlendiriyorum.
+                    </p>
+                    
+                    <p class="text-lg leading-relaxed text-gray-700">
+                        Bu derinlemesine saha tecrübesi ve stratejik bakış açısını birleştirerek, kurumların operasyonel süreçlerini mükemmelleştirmelerine, sürdürülebilir ve çevik tedarik zincirleri oluşturmalarına ve beklenmedik krizlere karşı dirençli yapılar inşa etmelerine rehberlik ediyorum.
+                    </p>
+                </div>
+            </div>
+            
+           
+            
+            <!-- Services Section -->
+            <div class="mb-16 animate-section animate-fade animate-delay-600">
+                <div class="flex items-center mb-6">
+                    <div class="bg-blue-500 h-10 w-1 mr-4"></div>
+                    <h2 class="text-2xl font-bold text-gray-800">Yönetim Danışmanlığı Hizmetlerim</h2>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <p class="leading-relaxed text-gray-700">
+                        Bu doğrultuda sunduğum yönetim danışmanlığı hizmetleri kapsamında: Kurumların özel ihtiyaçlarına yönelik olarak operasyonel verimliliği artırma, sürdürülebilir lojistik ve tedarik zinciri sistemleri kurma ve kriz yönetimi stratejileri geliştirme konularında kapsamlı destek sağlıyorum. Amacım, kurumların potansiyellerini tam olarak ortaya çıkarmalarına ve hedeflerine ulaşmalarına yardımcı olmak.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Education Section -->
+            <div class="mb-16 animate-section animate-fade animate-delay-700">
+                <div class="flex items-center mb-6">
+                    <div class="bg-green-500 h-10 w-1 mr-4"></div>
+                    <h2 class="text-2xl font-bold text-gray-800">Eğitim Programlarım</h2>
+                </div>
+                
+                <div class="bg-gray-50 p-6 rounded-lg">
+                    <p class="leading-relaxed text-gray-700">
+                        Ayrıca, bilgi ve deneyimlerimi aktardığım eğitimlerimle ise: Gerçek iş hayatından çarpıcı örneklerle zenginleştirdiğim, uygulamaya dönük ve interaktif programlar aracılığıyla kurum çalışanlarının bilgi ve becerilerini artırmayı hedefliyorum. Eğitimlerim, katılımcıların pratik çözümler üretmelerini ve kurumlarına değer katmalarını sağlayacak şekilde tasarlanmıştır.
+                    </p>
+                </div>
+            </div>
+            
+            <!-- Call to Action -->
+            <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-8 rounded-lg text-white shadow-lg animate-section animate-fade animate-delay-800" style="background:#00533d;">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0 md:pr-6">
+                        <h3 class="text-xl font-bold mb-3">İhtiyaçlarınızı Konuşalım</h3>
+                        <p class="leading-relaxed">
+                            İhtiyaçlarınızı daha yakından anlamak ve size özel bir yol haritası oluşturmak için 15 dakikalık bir ön görüşme teklif ediyorum. Bu görüşme için dilediğiniz miktarda bir bağışı Darüşşafaka Cemiyeti üzerinden yaparak bağış dekontunu bana e-posta ile iletebilirsiniz.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 text-center">
+                        <img src="logo-tr.svg" alt="Logo" style="height:90px;width:auto;margin:0 auto 12px auto;display:block;" />
+                        <a href="https://www.darussafaka.org/bagis/genel-bagis" class="inline-block bg-white text-blue-600 font-medium py-3 px-6 rounded-full hover:bg-blue-100 transition-colors" target="_blank">
+                            Bağış Yap
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!-- Footer Section -->
+  <footer style="zoom: 0.8; background-color: #CCDDEA;" class="text-gray-800 py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Column 1: About & Contact -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <!-- LOGO KALDIRILDI -->
+                    <span style="font-family: 'Aptly', 'Aptly Bold', sans-serif; font-weight: 700;" class="text-xl">Demet Ayaz</span>
+                </div>
+                <p style="font-family: 'Roboto', sans-serif; font-weight: 400;" class="text-gray-700 mb-4">
+                    Tedarik zinciri ve lojistik alanında uzman danışmanlık ve eğitim hizmetleri.
+                </p>
+            </div>
+            
+            <!-- Column 2: Services -->
+            <div>
+                <h3 style="font-family: 'Roboto', sans-serif; font-weight: 700;" class="text-lg mb-6 text-gray-900">Hizmetlerimiz</h3>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="yonetim-danismanligi.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            Yönetim Danışmanlığı
+                        </a>
+                    </li>
+                    <li>
+                        <a href="egitimler.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            Eğitimler
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gonullu-calismalar.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            Gönüllü Çalışmalar
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Column 3: Quick Links -->
+            <div>
+                <h3 style="font-family: 'Roboto', sans-serif; font-weight: 700;" class="text-lg mb-6 text-gray-900">Hızlı Bağlantılar</h3>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="hakkimda.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            Hakkımda
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">Blog</a>
+                    </li>
+                    <li>
+
+                        <a href="iletisim.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            İletişim
+                        </a>
+                    </li>
+                   </ul>
+            </div>
+            
+            <!-- İletişim (Sosyal Medya yerine) -->
+            <div>
+                <h4 style="font-family: 'Roboto', sans-serif; font-weight: 500;" class="text-gray-900 mb-3">İletişim</h4>
+                <div class="flex flex-col space-y-2">
+                    <a href="mailto:Ayazd@mef.edu.tr" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                        <i class="fas fa-envelope mr-2 text-blue-600"></i> Ayazd@mef.edu.tr
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                        <i class="fas fa-map-marker-alt mr-2 text-blue-600"></i> İstanbul
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="border-t border-gray-400 mt-10 pt-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p style="font-family: 'Roboto', sans-serif; font-weight: 400;" class="text-gray-700 text-sm text-center w-full">
+                    &copy; 2025 Demet Ayaz. Tüm hakları saklıdır.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+    <script>
+        // Scroll animation script
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.animate-section');
+            
+            // Initial check on page load
+            checkSections();
+            
+            // Check sections on scroll
+            window.addEventListener('scroll', checkSections);
+            
+            function checkSections() {
+                const triggerBottom = window.innerHeight * 0.85;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    
+                    if (sectionTop < triggerBottom) {
+                        section.classList.add('visible');
+                    } else {
+                        // Optional: remove the class if you want elements to animate again when scrolling back up
+                        // section.classList.remove('visible');
+                    }
+                });
+            }
+            
+            // Make dropdown menu work with clicks as well
+            const dropdownTrigger = document.querySelector('.dropdown-trigger');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const navDropdown = document.querySelector('.nav-dropdown');
+            
+            if (dropdownTrigger && dropdownMenu) {
+                // Toggle dropdown on click
+                dropdownTrigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdownMenu.classList.toggle('active');
+                });
+                
+                // Close the dropdown when clicking outside of the dropdown area
+                document.addEventListener('click', function(e) {
+                    if (!navDropdown.contains(e.target)) {
+                        dropdownMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+
+</html> 

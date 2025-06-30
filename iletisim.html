@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demet Ayaz - Sıkça Sorulan Sorular</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/aptly">
+    <style>
+        body, p, div {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+        h1, h2, h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+        .font-medium, button, .nav-link, .btn {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+        }
+        .faq-item { border-bottom: 1px solid #e5e7eb; }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-question { cursor: pointer; }
+        .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.3s ease-out; }
+        .faq-answer.active { max-height: 500px; }
+    </style>
+</head>
+<body class="overflow-x-hidden bg-gray-50">
+    <!-- Header/Navigation -->
+    <header class="bg-white fixed top-0 left-0 right-0 z-50 flex items-center">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="Logo" class="logo-image h-32 w-47">
+            </a>
+            <nav class="hidden lg:flex space-x-8">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="hakkimda.html" class="nav-link">Hakkımda</a>
+                
+                <!-- Dropdown for Hizmetlerimiz -->
+                <div class="relative nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger flex items-center">
+                        Hizmetlerimiz
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu absolute bg-white shadow-lg rounded-md mt-2 py-2 w-56 z-50">
+                        <a href="yonetim-danismanligi.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Yönetim Danışmanlığı</a>
+                        <a href="egitimler.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Eğitimler</a>
+                        <a href="gonullu-calismalar.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Gönüllü Çalışmalar</a>
+                    </div>
+                </div>
+                
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="iletisim.html" class="nav-link">İletişim</a>
+            </nav>
+            <!-- Right Side Icons - Language Selection -->
+            <div class="flex items-center space-x-6">
+                <!-- Mobile Menu Button - Only visible on mobile -->
+                <button class="block lg:hidden header-icon" aria-label="Toggle mobile menu" type="button" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div style="height:70px;"></div>
+    <!-- SSS Section -->
+    <section class="py-24">
+        <div class="container mx-auto max-w-3xl px-4">
+            <h1 class="text-4xl font-bold text-gray-800 mb-10 text-center">Sıkça Sorulan Sorular</h1>
+                    <div class="bg-white p-8 rounded-lg shadow-lg">
+                        <div class="space-y-4">
+                    <!-- SSS İçeriği Burada (daha önce eklediğimiz güncel sorular) -->
+                    <div class="faq-item py-4">
+                        <div class="faq-question flex justify-between items-center">
+                            <h3 class="text-lg font-medium text-gray-800">Yönetim Danışmanlığı hizmetleriniz kimler için uygun?</h3>
+                            <i class="fas fa-chevron-down text-gray-500"></i>
+                        </div>
+                        <div class="faq-answer mt-2 text-gray-600">
+                            Yönetim danışmanlığı hizmetlerim, operasyonel süreçlerinde verimlilik arayan, tedarik zinciri yönetimini güçlendirmek isteyen, krizlere karşı daha dirençli yapılar oluşturmayı hedefleyen ve rekabet avantajını artırmayı amaçlayan tüm kurumlar için uygundur.<br>
+                            İster büyüme aşamasında bir girişim olun, ister köklü bir organizasyon; mevcut operasyonlarınızı analiz ederek size özgü, uygulanabilir ve ölçülebilir çözümler sunuyorum. Her kurumun dinamiklerinin farklı olduğunun bilinciyle, kişiye ve kuruma özel danışmanlık süreçleri tasarlıyorum.
+                                </div>
+                            </div>
+                    <div class="faq-item py-4">
+                        <div class="faq-question flex justify-between items-center">
+                            <h3 class="text-lg font-medium text-gray-800">Hangi alanlarda danışmanlık desteği veriyorsunuz?</h3>
+                            <i class="fas fa-chevron-down text-gray-500"></i>
+                        </div>
+                        <div class="faq-answer mt-2 text-gray-600">
+                            Danışmanlık hizmetlerim geniş bir operasyonel alanı kapsıyor.<br>
+                            Başlıca uzmanlık alanlarım arasında tedarik zinciri yönetimi, üretim süreçleri optimizasyonu, depo ve stok yönetimi, sipariş ve tedarik süreçlerinin iyileştirilmesi, lojistik ve dağıtım operasyonlarının verimlendirilmesi, satış kanalları yönetimi, müşteri deneyimi geliştirme, iade & geri dönüşüm süreçleri ile sürdürülebilirlik uygulamaları yer alıyor.<br>
+                            Her projede kurumun mevcut yapısını, hedeflerini ve sektörel dinamikleri dikkate alarak, pratikte uygulanabilir stratejiler geliştiriyorum.
+                                </div>
+                            </div>
+                    <div class="faq-item py-4">
+                        <div class="faq-question flex justify-between items-center">
+                            <h3 class="text-lg font-medium text-gray-800">Eğitim programlarınız kimlere hitap ediyor?</h3>
+                            <i class="fas fa-chevron-down text-gray-500"></i>
+                        </div>
+                        <div class="faq-answer mt-2 text-gray-600">
+                            Eğitimlerim, iş hayatında doğrudan uygulama yapacak profesyonellere yöneliktir.<br>
+                            Tedarik zinciri, lojistik, üretim ve operasyon yönetimi gibi alanlarda çalışan ekipler; yöneticiler, yönetici adayları ve iş süreçlerini daha verimli hâle getirmek isteyen tüm profesyoneller için uygundur.<br>
+                            Ayrıca hızlı değişen iş dünyasında güncel bilgiye, yeni nesil tekniklere ve sahadan gelen deneyimlere ihtiyaç duyan kurumlara özel eğitim içerikleri de oluşturuyorum.
+                                </div>
+                            </div>
+                    <div class="faq-item py-4">
+                        <div class="faq-question flex justify-between items-center">
+                            <h3 class="text-lg font-medium text-gray-800">Eğitimleriniz nasıl bir yöntemle ilerliyor?</h3>
+                            <i class="fas fa-chevron-down text-gray-500"></i>
+                        </div>
+                        <div class="faq-answer mt-2 text-gray-600">
+                            Eğitimlerimde teorik bilgiyi minimumda tutuyor, doğrudan sahada karşılaşılan gerçek problemleri ve çözüm yollarını merkeze alıyorum.<br>
+                            Katılımcıların pasif dinleyici değil, aktif problem çözücü olmalarını sağlamak için vaka çalışmaları, grup egzersizleri ve interaktif atölye teknikleri kullanıyorum.<br>
+                            Bu sayede eğitimlerim, sadece bilgi aktarımıyla sınırlı kalmıyor; katılımcıların kurumlarında hemen uygulayabilecekleri pratik kazanımlarla sonuçlanıyor.<br>
+                            Her eğitim programı, ön analiz yapılarak ve katılımcı profiline uygun olarak özel hazırlanır.
+                        </div>
+                    </div>
+                    <div class="faq-item py-4">
+                        <div class="faq-question flex justify-between items-center">
+                            <h3 class="text-lg font-medium text-gray-800">Danışmanlık veya eğitim almak için nasıl bir süreç işliyor?</h3>
+                            <i class="fas fa-chevron-down text-gray-500"></i>
+                        </div>
+                        <div class="faq-answer mt-2 text-gray-600">
+                            İlk adım olarak, kurumunuzu ve ihtiyaçlarınızı daha yakından tanımak için ücretsiz 15 dakikalık bir ön görüşme planlıyoruz.<br>
+                            Bu görüşmede mevcut durum analizi yapıyor, hedeflerinizi ve karşılaştığınız zorlukları değerlendiriyoruz.<br>
+                            Görüşme sonrasında, size özel bir danışmanlık veya eğitim yol haritası oluşturuyor ve süreci adım adım planlıyoruz.<br>
+                            Her sürecin sonunda somut çıktıların ve ölçülebilir başarı kriterlerinin tanımlandığı bir çalışma modeli sunuyorum.
+                        </div>
+                    </div>
+                        <div class="faq-item py-4">
+                            <div class="faq-question flex justify-between items-center">
+                            <h3 class="text-lg font-medium text-gray-800">Ön görüşme için nasıl başvuru yapabilirim?</h3>
+                                <i class="fas fa-chevron-down text-gray-500"></i>
+                            </div>
+                            <div class="faq-answer mt-2 text-gray-600">
+                            Ön görüşmeye başvurmak oldukça kolay:<br>
+                            Darüşşafaka Cemiyeti'ne gönlünüzden geçen bir miktarda bağış yaparak toplumsal bir dayanışmaya da katkı sunmuş oluyorsunuz.<br>
+                            Bağış yaptıktan sonra, bağış dekontunuzu ayazd@mef.edu.tr e-posta adresine iletmeniz yeterlidir.<br>
+                            Bağış dekontunuz ulaştıktan sonra en kısa sürede sizinle iletişime geçerek ön görüşme için randevu planlıyoruz.<br>
+                            Bu süreci hem anlamlı bir sosyal katkıya hem de işiniz için değerli bir başlangıca dönüştürüyoruz.
+                            </div>
+                        </div>
+                        <div class="faq-item py-4">
+                            <div class="faq-question flex justify-between items-center">
+                            <h3 class="text-lg font-medium text-gray-800">Hizmetleriniz sadece İstanbul için mi geçerli?</h3>
+                                <i class="fas fa-chevron-down text-gray-500"></i>
+                            </div>
+                            <div class="faq-answer mt-2 text-gray-600">
+                            Hayır. Hizmetlerim Türkiye genelinde ve talebe bağlı olarak uluslararası ölçekte de sunulabilmektedir.<br>
+                            Yüz yüze görüşmelerin yanı sıra, dijital platformlar üzerinden (Zoom, Microsoft Teams vb.) online danışmanlık ve eğitim hizmetleri de veriyorum.<br>
+                            Böylece bulunduğunuz yer neresi olursa olsun, size ve ekibinize kolayca ulaşabiliyor ve süreci hızlı şekilde başlatabiliyoruz.
+                            </div>
+                        </div>
+                        <div class="faq-item py-4">
+                            <div class="faq-question flex justify-between items-center">
+                            <h3 class="text-lg font-medium text-gray-800">Kadın girişimcilere yönelik özel bir çalışmanız var mı?</h3>
+                                <i class="fas fa-chevron-down text-gray-500"></i>
+                            </div>
+                            <div class="faq-answer mt-2 text-gray-600">
+                            Evet. Kadın girişimcilerin iş süreçlerini daha verimli ve sürdürülebilir hâle getirebilmeleri için özel olarak tasarladığım Mikro Tedarik Zinciri Eğitimi bulunuyor.<br>
+                            Bu eğitimde, tedarik zincirinin her aşamasında yerel kaynak kullanımını artırma, operasyonel verimlilik sağlama ve sürdürülebilir iş modelleri geliştirme üzerine pratik bilgiler sunuyorum.<br>
+                            Amacım, kadın girişimcilerin daha dirençli, büyüme odaklı ve toplumsal etkisi yüksek işletmeler kurmalarına destek olmak.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer Section -->
+    <footer style="zoom: 0.8; background-color: #CCDDEA;" class="text-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1: About & Contact -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <!-- LOGO KALDIRILDI -->
+                        <span style="font-family: 'Aptly', 'Aptly Bold', sans-serif; font-weight: 700;" class="text-xl">Demet Ayaz</span>
+                    </div>
+                    <p style="font-family: 'Roboto', sans-serif; font-weight: 400;" class="text-gray-700 mb-4">
+                        Tedarik zinciri ve lojistik alanında uzman danışmanlık ve eğitim hizmetleri.
+                    </p>
+                </div>
+                
+                <!-- Column 2: Services -->
+                <div>
+                    <h3 style="font-family: 'Roboto', sans-serif; font-weight: 700;" class="text-lg mb-6 text-gray-900">Hizmetlerimiz</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="yonetim-danismanligi.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                Yönetim Danışmanlığı
+                            </a>
+                        </li>
+                        <li>
+                            <a href="egitimler.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                Eğitimler
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gonullu-calismalar.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                Gönüllü Çalışmalar
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Quick Links -->
+                <div>
+                    <h3 style="font-family: 'Roboto', sans-serif; font-weight: 700;" class="text-lg mb-6 text-gray-900">Hızlı Bağlantılar</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="hakkimda.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                Hakkımda
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">Blog</a>
+                        </li>
+                        <li>
+
+                            <a href="iletisim.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                İletişim
+                            </a>
+                        </li>
+                       </ul>
+                </div>
+                
+                <!-- İletişim (Sosyal Medya yerine) -->
+                    <div>
+                            <h4 style="font-family: 'Roboto', sans-serif; font-weight: 500;" class="text-gray-900 mb-3">İletişim</h4>
+                            <div class="flex flex-col space-y-2">
+                                <a href="mailto:Ayazd@mef.edu.tr" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                    <i class="fas fa-envelope mr-2 text-blue-600"></i> Ayazd@mef.edu.tr
+                                </a>
+                                <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-600"></i> İstanbul
+                                </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-400 mt-10 pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p style="font-family: 'Roboto', sans-serif; font-weight: 400;" class="text-gray-700 text-sm text-center w-full">
+                        &copy; 2025 Demet Ayaz. Tüm hakları saklıdır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="js/mobile-menu.js" defer></script>
+    <script>
+
+          // Scroll animation script
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.animate-section');
+            
+            // Initial check on page load
+            checkSections();
+            
+            // Check sections on scroll
+            window.addEventListener('scroll', checkSections);
+            
+            function checkSections() {
+                const triggerBottom = window.innerHeight * 0.85;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    
+                    if (sectionTop < triggerBottom) {
+                        section.classList.add('visible');
+                    } else {
+                        // Optional: remove the class if you want elements to animate again when scrolling back up
+                        // section.classList.remove('visible');
+                    }
+                });
+            }
+            
+            // Make dropdown menu work with clicks as well
+            const dropdownTrigger = document.querySelector('.dropdown-trigger');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const navDropdown = document.querySelector('.nav-dropdown');
+            
+            if (dropdownTrigger && dropdownMenu) {
+                // Toggle dropdown on click
+                dropdownTrigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdownMenu.classList.toggle('active');
+                });
+                
+                // Close the dropdown when clicking outside of the dropdown area
+                document.addEventListener('click', function(e) {
+                    if (!navDropdown.contains(e.target)) {
+                        dropdownMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+      // Typewriter effect for hero title and description
+      function typeWriter(element, text, speed, callback) {
+        let i = 0;
+        function typing() {
+          if (i <= text.length) {
+            element.textContent = text.slice(0, i);
+            i++;
+            setTimeout(typing, speed);
+          } else if (callback) {
+            callback();
+          }
+        }
+        typing();
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        const titleEl = document.getElementById('hero-title');
+        const descEl = document.getElementById('hero-desc');
+        const titleText = titleEl.getAttribute('data-text');
+        const descText = descEl.getAttribute('data-text');
+        typeWriter(titleEl, titleText, 40, function() {
+          setTimeout(function() {
+            typeWriter(descEl, descText, 18);
+          }, 400);
+        });
+      });
+        // FAQ Accordion functionality
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const answer = question.nextElementSibling;
+                const icon = question.querySelector('i');
+                answer.classList.toggle('active');
+                icon.style.transform = answer.classList.contains('active') ? 'rotate(180deg)' : 'rotate(0)';
+                if (answer.classList.contains('active')) {
+                    answer.style.maxHeight = answer.scrollHeight + 'px';
+                } else {
+                    answer.style.maxHeight = '0';
+                }
+            });
+        });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        document.querySelectorAll('.dropdown-menu.active').forEach(function(menu) {
+          menu.classList.remove('active');
+            });
+        });
+    </script>
+</body>
+<script src="js/mobile-menu.js" defer></script>
+</html>

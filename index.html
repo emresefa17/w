@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demet Ayaz - Tedarik Zinciri Çözümleri</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/mobile-menu.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/aptly">
+   <style>
+        /* Dropdown menu styles */
+        .dropdown-menu {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu,
+        .dropdown-menu.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        
+        .dropdown-trigger:focus + .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Header/Navigation -->
+    <header class="bg-white fixed top-0 left-0 right-0 z-50 flex items-center">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="Logo" class="logo-image h-32 w-47">
+            </a>
+            
+            <!-- Main Navigation -->
+            <nav class="hidden lg:flex space-x-8">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="hakkimda.html" class="nav-link">Hakkımda</a>
+                
+                <!-- Dropdown for Hizmetlerimiz -->
+                <div class="relative nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger flex items-center">
+                        Hizmetlerimiz
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu absolute bg-white shadow-lg rounded-md mt-2 py-2 w-56 z-50">
+                        <a href="yonetim-danismanligi.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Yönetim Danışmanlığı</a>
+                        <a href="egitimler.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Eğitimler</a>
+                        <a href="gonullu-calismalar.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Gönüllü Çalışmalar</a>
+                    </div>
+                </div>
+                
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="iletisim.html" class="nav-link">İletişim</a>
+            </nav>
+            
+            <!-- Right Side Icons - Language Selection -->
+            <div class="flex items-center space-x-6">
+                <!-- Mobile Menu Button - Only visible on mobile -->
+                <button class="block lg:hidden header-icon" aria-label="Toggle mobile menu" type="button" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Background Image -->
+    <section class="hero-container">
+        <img src="demetbanner.jpg" 
+             alt="San Francisco skyline with clock tower" 
+             class="hero-image">
+        <!-- Text overlay -->
+        <div class="hero-overlay">
+            <h1 class="hero-title" id="hero-title" data-text="Tedarik zincirini birlikte dönüştürüyoruz."></h1>
+            <p class="hero-description" id="hero-desc" data-text="Net çözümler kurguluyor ve uygulamaya dönük eğitimlerle her adımda fark yaratıyoruz."></p>
+        </div>
+    </section>
+
+    <!-- demett Section -->
+    <section class="demett-section bg-white animate-section animate-fade">
+        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-start justify-between">
+            <!-- Left Text Content -->
+            <div style="zoom: 70%;" class="mb-10 lg:mb-0 lg:w-1/2 lg:pr-16 animate-section animate-left animate-delay-200">
+                <h2 class="demett-heading" id="demett-title" data-text="Tedarik Zinciri ve Lojistik Alanında Uzman Danışmanlık Hizmetleri" style="font-family: 'Roboto', sans-serif; font-weight: 700;"></h2>
+            </div>
+            
+            <!-- Right Stat Counter -->
+            <div style="zoom: 90%;" class="lg:w-1/2 text-right animate-section animate-right animate-delay-400">
+                <div class="mb-1">
+                    <span class="demett-number" style="font-family: 'Roboto', sans-serif; font-weight: 700;">15+</span>
+                </div>
+                <p id="demett-subtitle" class="demett-subtitle" data-text="YILLIK ULUSLARARASI DENEYİM VE UZMANLIK" style="font-family: 'Roboto', sans-serif; font-weight: 500;"></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- HAKKIMDA Section (replacing Q1 Financial Report) -->
+    <section class="financial-report-section animate-section animate-fade">
+        <div class="container mx-auto flex flex-col lg:flex-row">
+            <!-- Left Image -->
+            <div class="lg:w-1/2 q1-image-container animate-section animate-left animate-delay-200">
+                <img src="images/hakkımda.jpg" 
+                    alt="Profesyonel iş kadını portresi" class="q1-image">
+                <div class="image-overlay"></div>
+            </div>
+            
+            <!-- Right Content -->
+            <div class="lg:w-1/2 bg-white relative animate-section animate-right animate-delay-400">
+                <div class="blue-accent"></div>
+                <div class="financial-content">
+                    <h2 class="financial-title" style="font-family: 'Roboto', sans-serif; font-weight: 700;">HAKKIMDA</h2>
+                   
+                    
+                    <p class="financial-date" style="font-family: 'Roboto', sans-serif; font-weight: 500;">Tedarik Zinciri ve Lojistik Uzmanı</p>
+                    <p class="financial-description" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                        Ben Demet Ayaz. Tedarik zinciri, lojistik ve operasyon yönetiminde 20 yılı aşkın bir kariyere sahip olarak, Bella Maison, Reysaş Lojistik ve Yurtiçi Kargo gibi sektörün önde gelen kuruluşlarında edindiğim kapsamlı yöneticilik deneyimini, şimdi stratejik yönetim danışmanlığı ve uygulamaya dönük eğitimlerle kurumların büyüme potansiyellerini hayata geçirmelerine odaklanarak değerlendiriyorum.
+                    </p>
+                    
+                    <div class="registration-links">
+                        <a href="hakkimda.html" class="agm-link" style="font-family: 'Roboto', sans-serif; font-weight: 500;">
+                            <span class="arrow-icon">→</span> Özgeçmişim ve Kariyerim Hakkında Daha Fazla Bilgi
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- YÖNETİM DANIŞMANLIĞI Section (replacing Annual General Meeting) -->
+    <section class="agm-section animate-section animate-fade">
+        <div class="container mx-auto relative">
+            <div class="lg:flex lg:items-center">
+                <!-- Left Content Box -->
+                <div class="lg:w-1/2 bg-white agm-content-wrapper animate-section animate-left animate-delay-200">
+                    <div class="agm-content">
+                        <h2 class="agm-title" style="font-family: 'Roboto', sans-serif; font-weight: 700;">HİZMETLERİMİZ</h2>
+                        
+                        <p class="agm-date" style="font-family: 'Roboto', sans-serif; font-weight: 500;">Yönetim Danışmanlığı</p>
+                        <p class="agm-venue" style="font-family: 'Roboto', sans-serif; font-weight: 400;">Kurumların rekabet gücünü artırmak, operasyonel mükemmeliyete ulaşmak ve sürdürülebilir sistemler kurmak amacıyla yönetim danışmanlığı hizmeti sunuyorum. </p>
+                        
+                        <div class="agm-links">
+                            <a href="yonetim-danismanligi.html" class="agm-link" style="font-family: 'Roboto', sans-serif; font-weight: 500;">
+                                <span class="arrow-icon">→</span> <span class="font-bold" style="font-weight:700;">Danışmanlık Hizmetleri Hakkında Detaylı Bilgi</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Image -->
+                <div class="lg:w-3/5 lg:absolute lg:right-0 lg:top-0 lg:bottom-0 agm-image-container animate-section animate-right animate-delay-400">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1769&q=80" 
+                        alt="Danışmanlık toplantısı" class="agm-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EĞİTİMLER Section (replacing Urban Insight) -->
+    <section class="urban-insight-section animate-section animate-fade">
+        <div class="container mx-auto relative">
+            <div class="lg:flex lg:items-center">
+                <!-- Left Image -->
+                <div class="lg:w-3/5 lg:absolute lg:left-0 lg:top-0 lg:bottom-0 trees-image-container animate-section animate-left animate-delay-200">
+                    <img src="images/eğitim.jpg" 
+                        alt="Eğitim semineri" class="trees-image">
+                </div>
+                
+                <!-- Right Content Box -->
+                <div class="lg:w-1/2 lg:ml-auto bg-white urban-content-wrapper animate-section animate-right animate-delay-400">
+                    <div class="urban-content">
+                        <h2 class="urban-title" style="font-family: 'Roboto', sans-serif; font-weight: 700;">KURUMSAL EĞİTİM PROGRAMLARI</h2>
+                        <p class="financial-date" style="font-family: 'Roboto', sans-serif; font-weight: 500;">Uygulamalı Eğitimler</p>
+                      
+                        
+                        <p class="urban-description" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            Teoriden çok pratiğe dayanan, sahadaki gerçek deneyimlerle zenginleştirilmiş interaktif eğitimler sunuyorum. Katılımcıların gerçek sorunlarına çözüm üretmelerini sağlayan, bilgi aktarımının ötesine geçen bir yaklaşım benimsiyorum.
+                        </p>
+                        
+                        <a href="egitimler.html" class="urban-cta" style="font-family: 'Roboto', sans-serif; font-weight: 500;">Eğitim Programlarını İncele</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GÖNÜLLÜ ÇALIŞMALAR Section (new section) -->
+    <section class="agm-section animate-section animate-fade" style="margin-top: 6rem;">
+        <div class="container mx-auto relative">
+            <div class="lg:flex lg:items-center">
+                <!-- Left Content Box -->
+                <div class="lg:w-1/2 bg-white agm-content-wrapper animate-section animate-left animate-delay-200">
+                    <div class="agm-content">
+                        
+                        <h2 class="agm-title" style="font-family: 'Roboto', sans-serif; font-weight: 700;">Gönüllü Çalışmalar</h2>
+                        
+                        <p class="agm-date" style="font-family: 'Roboto', sans-serif; font-weight: 500;">Topluma Katkı & Mentorluk</p>
+                        <p class="agm-venue" style="font-family: 'Roboto', sans-serif; font-weight: 400;">Tedarik zinciri ve lojistik alanındaki bilgi ve deneyimimi, gönüllü danışmanlık ve mentorluk programları aracılığıyla geleceğin profesyonelleriyle paylaşıyorum. Sürdürülebilir iş modelleri için çeşitli sivil toplum kuruluşlarıyla çalışmalar yürütmekteyim.</p>
+                        
+                        <div class="agm-links">
+                            <a href="gonullu-calismalar.html" class="agm-link" style="font-family: 'Roboto', sans-serif; font-weight: 500;">
+                                <span class="arrow-icon">→</span> Gönüllü Çalışmalarım Hakkında Daha Fazla Bilgi
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Image -->
+                <div class="lg:w-3/5 lg:absolute lg:right-0 lg:top-0 lg:bottom-0 agm-image-container animate-section animate-right animate-delay-400">
+                    <img src="images/gonullu.jpg" 
+                        alt="Gönüllü çalışma" class="agm-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <div class="container mx-auto px-6 mb-16">
+      <div class="max-w-3xl mx-auto p-8 rounded-lg text-white shadow-lg animate-section animate-fade animate-delay-800" style="background:#00533d;">
+          <div class="flex flex-col md:flex-row items-center">
+              <div class="md:w-2/3 mb-6 md:mb-0 md:pr-6">
+                  <h3 class="text-xl font-bold mb-3">İhtiyaçlarınızı Konuşalım</h3>
+                  <p class="leading-relaxed">
+                      İhtiyaçlarınızı daha yakından anlamak ve size özel bir yol haritası oluşturmak için 15 dakikalık bir ön görüşme teklif ediyorum. Bu görüşme için dilediğiniz miktarda bir bağışı Darüşşafaka Cemiyeti üzerinden yaparak bağış dekontunu bana e-posta ile iletebilirsiniz.
+                  </p>
+                    </div>
+              <div class="md:w-1/3 text-center">
+                  <img src="logo-tr.svg" alt="Logo" style="height:90px;width:auto;margin:0 auto 12px auto;display:block;" />
+                  <a href="https://www.darussafaka.org/bagis/genel-bagis" class="inline-block bg-white text-blue-600 font-medium py-3 px-6 rounded-full hover:bg-blue-100 transition-colors" target="_blank">
+                      Bağış Yap
+                  </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       
+
+    <!-- Footer Section -->
+    <footer style="zoom: 0.8; background-color: #CCDDEA;" class="text-gray-800 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Column 1: About & Contact -->
+                <div>
+                    <div class="flex items-center mb-6">
+                        <!-- LOGO KALDIRILDI -->
+                        <span style="font-family: 'Aptly', 'Aptly Bold', sans-serif; font-weight: 700;" class="text-xl">Demet Ayaz</span>
+                    </div>
+                    <p style="font-family: 'Roboto', sans-serif; font-weight: 400;" class="text-gray-700 mb-4">
+                        Tedarik zinciri ve lojistik alanında uzman danışmanlık ve eğitim hizmetleri.
+                    </p>
+                </div>
+                
+                <!-- Column 2: Services -->
+                <div>
+                    <h3 style="font-family: 'Roboto', sans-serif; font-weight: 700;" class="text-lg mb-6 text-gray-900">Hizmetlerimiz</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="yonetim-danismanligi.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                Yönetim Danışmanlığı
+                            </a>
+                        </li>
+                        <li>
+                            <a href="egitimler.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                Eğitimler
+                            </a>
+                        </li>
+                        <li>
+                            <a href="gonullu-calismalar.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                Gönüllü Çalışmalar
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+                
+                <!-- Column 3: Quick Links -->
+                <div>
+                    <h3 style="font-family: 'Roboto', sans-serif; font-weight: 700;" class="text-lg mb-6 text-gray-900">Hızlı Bağlantılar</h3>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="hakkimda.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                Hakkımda
+                            </a>
+                        </li>
+                        <li>
+                            <a href="blog.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">Blog</a>
+                        </li>
+                        <li>
+
+                            <a href="iletisim.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                İletişim
+                            </a>
+                        </li>
+                       </ul>
+                </div>
+                
+                <!-- İletişim (Sosyal Medya yerine) -->
+                    <div>
+                            <h4 style="font-family: 'Roboto', sans-serif; font-weight: 500;" class="text-gray-900 mb-3">İletişim</h4>
+                            <div class="flex flex-col space-y-2">
+                                <a href="mailto:Ayazd@mef.edu.tr" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                                    <i class="fas fa-envelope mr-2 text-blue-600"></i> Ayazd@mef.edu.tr
+                                </a>
+                                <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            <i class="fas fa-map-marker-alt mr-2 text-blue-600"></i> İstanbul
+                                </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Copyright -->
+            <div class="border-t border-gray-400 mt-10 pt-6">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p style="font-family: 'Roboto', sans-serif; font-weight: 400;" class="text-gray-700 text-sm text-center w-full">
+                        &copy; 2025Demet Ayaz. Tüm hakları saklıdır.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Scroll animation script
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.animate-section');
+            
+            // Initial check on page load
+            checkSections();
+            
+            // Check sections on scroll
+            window.addEventListener('scroll', checkSections);
+            
+            function checkSections() {
+                const triggerBottom = window.innerHeight * 0.85;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    
+                    if (sectionTop < triggerBottom) {
+                        section.classList.add('visible');
+                    } else {
+                        // Optional: remove the class if you want elements to animate again when scrolling back up
+                        // section.classList.remove('visible');
+                    }
+                });
+            }
+            
+            // Make dropdown menu work with clicks as well
+            const dropdownTrigger = document.querySelector('.dropdown-trigger');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const navDropdown = document.querySelector('.nav-dropdown');
+            
+            if (dropdownTrigger && dropdownMenu) {
+                // Toggle dropdown on click
+                dropdownTrigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdownMenu.classList.toggle('active');
+                });
+                
+                // Close the dropdown when clicking outside of the dropdown area
+                document.addEventListener('click', function(e) {
+                    if (!navDropdown.contains(e.target)) {
+                        dropdownMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+    <script>
+      // Typewriter effect for hero title and description and demett section
+      function typeWriter(element, text, speed, callback) {
+        let i = 0;
+        function typing() {
+          if (i <= text.length) {
+            element.textContent = text.slice(0, i);
+            i++;
+            setTimeout(typing, speed);
+          } else if (callback) {
+            callback();
+          }
+        }
+        typing();
+      }
+      document.addEventListener('DOMContentLoaded', function() {
+        // Hero
+        const titleEl = document.getElementById('hero-title');
+        const descEl = document.getElementById('hero-desc');
+        const titleText = titleEl ? titleEl.getAttribute('data-text') : null;
+        const descText = descEl ? descEl.getAttribute('data-text') : null;
+        if (titleEl && titleText) {
+          typeWriter(titleEl, titleText, 40, function() {
+            setTimeout(function() {
+              if (descEl && descText) typeWriter(descEl, descText, 18);
+            }, 400);
+          });
+        }
+        // demett Section
+        const demettTitle = document.getElementById('demett-title');
+        const demettSubtitle = document.getElementById('demett-subtitle');
+        const demettTitleText = demettTitle ? demettTitle.getAttribute('data-text') : null;
+        const demettSubtitleText = demettSubtitle ? demettSubtitle.getAttribute('data-text') : null;
+        if (demettTitle && demettTitleText) {
+          setTimeout(function() {
+            typeWriter(demettTitle, demettTitleText, 18, function() {
+              setTimeout(function() {
+                if (demettSubtitle && demettSubtitleText) typeWriter(demettSubtitle, demettSubtitleText, 10);
+              }, 300);
+            });
+          }, 1200); // Hero bitince başlasın diye gecikme
+            }
+        });
+    </script>
+</body>
+</html>

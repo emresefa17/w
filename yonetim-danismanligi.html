@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Demet Ayaz - Yönetim Danışmanlığı</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="js/mobile-menu.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.cdnfonts.com/css/aptly">
+    <style>
+        body, p, div {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 400;
+        }
+        h1, h2, h3 {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 700;
+        }
+        .font-medium, button, .nav-link, .btn {
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+        }
+        
+        /* Dropdown menu styles */
+        .dropdown-menu {
+            display: none;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: opacity 0.3s, transform 0.3s;
+            pointer-events: none;
+        }
+        
+        .nav-dropdown {
+            position: relative;
+        }
+        
+        .nav-dropdown:hover .dropdown-menu,
+        .dropdown-menu.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        
+        .dropdown-trigger:focus + .dropdown-menu {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+        
+        /* Consulting section styles */
+        .service-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .service-icon {
+            transition: transform 0.3s ease;
+        }
+        
+        .service-card:hover .service-icon {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Header/Navigation -->
+    <header class="bg-white fixed top-0 left-0 right-0 z-50 flex items-center">
+        <div class="container mx-auto px-6 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="index.html" class="flex items-center">
+                <img src="logo.png" alt="Logo" class="logo-image h-32 w-47">
+            </a>
+            
+           <!-- Main Navigation -->
+            <nav class="hidden lg:flex space-x-8">
+                <a href="index.html" class="nav-link">Ana Sayfa</a>
+                <a href="hakkimda.html" class="nav-link">Hakkımda</a>
+                
+                <!-- Dropdown for Hizmetlerimiz -->
+                <div class="relative nav-dropdown">
+                    <a href="#" class="nav-link dropdown-trigger flex items-center">
+                        Hizmetlerimiz
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </a>
+                    <!-- Dropdown Menu -->
+                    <div class="dropdown-menu absolute bg-white shadow-lg rounded-md mt-2 py-2 w-56 z-50">
+                        <a href="yonetim-danismanligi.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Yönetim Danışmanlığı</a>
+                        <a href="egitimler.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Eğitimler</a>
+                        <a href="gonullu-calismalar.html" class="block px-4 py-2 text-gray-800 hover:bg-blue-50 hover:text-blue-600 transition-colors">Gönüllü Çalışmalar</a>
+                    </div>
+                </div>
+                
+                <a href="blog.html" class="nav-link">Blog</a>
+                <a href="iletisim.html" class="nav-link">İletişim</a>
+            </nav>
+            
+            <!-- Right Side Icons - Language Selection -->
+            <div class="flex items-center space-x-6">
+                <!-- Mobile Menu Button - Only visible on mobile -->
+                <button class="block lg:hidden header-icon" aria-label="Toggle mobile menu" type="button" id="mobile-menu-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Management Consulting Section -->
+    <section style="zoom: 85%;" class="bg-white pt-28 pb-20">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <div class="mb-12 animate-section animate-fade">
+                <h1 class="text-4xl font-bold text-gray-800 mb-6">Yönetim Danışmanlığı</h1>
+                <p class="text-lg text-gray-700 leading-relaxed max-w-4xl">
+                    Kurumların rekabet gücünü artırmak, operasyonel mükemmeliyete ulaşmak ve sürdürülebilir sistemler kurmak amacıyla yönetim danışmanlığı hizmeti sunuyorum. Uzmanlık alanlarım:
+                </p>
+            </div>
+            
+            <!-- Main Services Grid (Top 2 Services Side by Side) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+                <!-- Service 1: Tedarik Zinciri Yönetimi -->
+                <div class="service-card bg-gray-50 rounded-lg overflow-hidden shadow-md animate-section animate-fade animate-delay-200">
+                    <div class="bg-blue-600 text-white p-6">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-link service-icon"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-4">Tedarik Zinciri Yönetimi</h2>
+                        <p class="text-blue-100">
+                            Hammadde tedarikinden nihai müşteriye kadar tüm süreçlerinizi analiz ediyor ve iyileştiriyoruz.
+                        </p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="text-blue-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Tedarikçi seçimi & performans kriterleri</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-blue-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Alternatif kayna geliştirme & risk senaryoları</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-blue-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Süreç optimizasyonu & maliyet kontrolü</span>
+                            </li>
+                        </ul>
+                        <p class="mt-4 text-gray-700">
+                            ile iş akışınızı hem esnek hem kârlı hâle getiriyoruz.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 2: Üretim Süreçleri & Planlama -->
+                <div class="service-card bg-gray-50 rounded-lg overflow-hidden shadow-md animate-section animate-fade animate-delay-300">
+                    <div class="bg-green-600 text-white p-6">
+                        <div class="text-4xl mb-4">
+                            <i class="fas fa-industry service-icon"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-4">Üretim Süreçleri & Planlama</h2>
+                        <p class="text-green-100">
+                            Operasyonel verimliliğinizi en üst düzeye çıkaracak çözümler sunuyoruz.
+                        </p>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <div class="text-green-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Mevcut süreç analizi</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-green-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Talep tahminleme & kapasite planlama</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-green-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Sürdürülebilir üretim modelleri</span>
+                            </li>
+                        </ul>
+                        <p class="mt-4 text-gray-700">
+                            ile performansınızı dönüştürüyoruz.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Other Services in Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Service 3 -->
+                <div class="service-card bg-gray-50 rounded-lg overflow-hidden shadow-md animate-section animate-fade animate-delay-400">
+                    <div class="bg-amber-600 text-white p-6">
+                        <div class="text-3xl mb-3 service-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <h2 class="text-xl font-bold">Depolama & Stok Yönetimi</h2>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <div class="text-amber-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Stok seviyesi optimizasyonu</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-amber-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Depo içi akış düzeni & otomasyon önerileri</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-amber-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Envanter yönetim sistemleri</span>
+                            </li>
+                        </ul>
+                        <p class="mt-3 text-sm text-gray-700">
+                            ile depolarınızı bir operasyon üssüne çeviriyoruz.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 4 -->
+                <div class="service-card bg-gray-50 rounded-lg overflow-hidden shadow-md animate-section animate-fade animate-delay-500">
+                    <div class="bg-purple-600 text-white p-6">
+                        <div class="text-3xl mb-3 service-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <h2 class="text-xl font-bold">Sipariş & Tedarik Yönetimi</h2>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <div class="text-purple-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Süreç hızlandırma & hata azaltma</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-purple-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Veri akışı & entegrasyon iyileştirmeleri</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-purple-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Satın alma stratejileri</span>
+                            </li>
+                        </ul>
+                        <p class="mt-3 text-sm text-gray-700">
+                            ile müşteri memnuniyetinizi katlayacak çözümler üretiyoruz.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 5 -->
+                <div class="service-card bg-gray-50 rounded-lg overflow-hidden shadow-md animate-section animate-fade animate-delay-600">
+                    <div class="bg-red-600 text-white p-6">
+                        <div class="text-3xl mb-3 service-icon">
+                            <i class="fas fa-box"></i>
+                        </div>
+                        <h2 class="text-xl font-bold">Paketleme & Lojistik Süreçleri</h2>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <div class="text-red-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Sürdürülebilir ambalaj analizleri</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-red-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Dağıtım kanalı & rota optimizasyonu</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-red-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Teslimat hızı & maliyet düşürme</span>
+                            </li>
+                        </ul>
+                        <p class="mt-3 text-sm text-gray-700">
+                            ile lojistik operasyonlarınızı güçlendiriyoruz.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 6 -->
+                <div class="service-card bg-gray-50 rounded-lg overflow-hidden shadow-md animate-section animate-fade animate-delay-700">
+                    <div class="bg-indigo-600 text-white p-6">
+                        <div class="text-3xl mb-3 service-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h2 class="text-xl font-bold">Satış Kanalları Yönetimi</h2>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <div class="text-indigo-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Eticaret & mağaza dağıtım stratejileri</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-indigo-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Çok kanallı entegrasyon & süreç yönetimi</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-indigo-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Satış sonrası deneyim tasarımı</span>
+                            </li>
+                        </ul>
+                        <p class="mt-3 text-sm text-gray-700">
+                            ile tüm temas noktalarınızda müşterinizi kazanıyoruz.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 7 -->
+                <div class="service-card bg-gray-50 rounded-lg overflow-hidden shadow-md animate-section animate-fade animate-delay-800">
+                    <div class="bg-cyan-600 text-white p-6">
+                        <div class="text-3xl mb-3 service-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <h2 class="text-xl font-bold">Müşteri Hizmetleri & Geri Bildirim Yönetimi</h2>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <div class="text-cyan-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Müşteri destek süreçlerinin yapılandırılması</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-cyan-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Geri bildirim analiziyle operasyonel iyileştirmeler</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-cyan-600 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Müşteri memnuniyeti odaklı süreç geliştirme</span>
+                            </li>
+                        </ul>
+                        <p class="mt-3 text-sm text-gray-700">
+                            ile sürdürülebilir bir sadakat yaratıyoruz.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Service 8 -->
+                <div class="service-card bg-gray-50 rounded-lg overflow-hidden shadow-md animate-section animate-fade animate-delay-900">
+                    <div class="bg-green-700 text-white p-6">
+                        <div class="text-3xl mb-3 service-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <h2 class="text-xl font-bold">İade & Geri Dönüşüm Süreçleri</h2>
+                    </div>
+                    <div class="p-6">
+                        <ul class="space-y-2 text-sm">
+                            <li class="flex items-start">
+                                <div class="text-green-700 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>İade akışlarının maliyet-etkin organizasyonu</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-green-700 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Atık yönetimi & geri dönüşüm optimizasyonu</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-green-700 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Yeşil tedarik zinciri uygulamaları</span>
+                            </li>
+                        </ul>
+                        <p class="mt-3 text-sm text-gray-700">
+                            ile çevreye ve bütçenize dost bir süreç kurguluyoruz.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service 9 (Full Width) -->
+            <div class="mb-16 bg-gray-50 rounded-lg overflow-hidden shadow-md animate-section animate-fade animate-delay-1000">
+                <div class="flex flex-col lg:flex-row">
+                    <div class="lg:w-1/3 bg-gray-800 text-white p-8 flex flex-col justify-center">
+                        <div class="text-5xl mb-4">
+                            <i class="fas fa-chart-line service-icon"></i>
+                        </div>
+                        <h2 class="text-2xl font-bold mb-4">Operasyonel Verimlilik & Sürdürülebilirlik</h2>
+                        <p class="text-gray-300">
+                            Dijital dönüşümü destekleyip, çevresel etkinizi azaltacak çözümler sunuyoruz.
+                        </p>
+                    </div>
+                    <div class="lg:w-2/3 p-8">
+                        <ul class="space-y-4">
+                            <li class="flex items-start">
+                                <div class="text-gray-800 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Stratejik iş süreçleri planlaması</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-gray-800 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Otomasyon & dijital araç değerlendirmesi</span>
+                            </li>
+                            <li class="flex items-start">
+                                <div class="text-gray-800 mr-2 mt-1">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <span>Karbon ayak izi analizi & sürdürülebilirlik politikası</span>
+                            </li>
+                        </ul>
+                        <p class="mt-4 text-gray-700">
+                            ile hem verimliliğinizi hem itibarınızı güçlendiriyoruz.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conclusion -->
+            <div class="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-500 shadow-md mt-8 animate-section animate-fade animate-delay-1100">
+                <p class="text-gray-800 text-lg">
+                    Her danışmanlık projesinde kurumun özgün ihtiyaçlarına özel, uygulanabilir çözümler üretmeye odaklanırım.
+                </p>
+            </div>
+            
+            <!-- Contact CTA -->
+            <div class="mt-16 bg-gradient-to-r from-blue-500 to-blue-600 p-8 rounded-lg text-white shadow-lg animate-section animate-fade animate-delay-1200">
+                <div class="flex flex-col md:flex-row items-center">
+                    <div class="md:w-2/3 mb-6 md:mb-0 md:pr-6">
+                        <h3 class="text-xl font-bold mb-3">Operasyonel Mükemmelliğe Doğru</h3>
+                        <p class="leading-relaxed">
+                            Kurumunuzun ihtiyaçlarına özel bir değerlendirme ve yol haritası için hemen iletişime geçin. İlk görüşme ve değerlendirme sonrasında, ihtiyaçlarınıza en uygun danışmanlık modelini birlikte belirleyelim.
+                        </p>
+                    </div>
+                    <div class="md:w-1/3 text-center">
+                        <a href="mailto:Ayazd@mef.edu.tr" class="inline-block bg-white text-blue-600 font-medium py-3 px-6 rounded-full hover:bg-blue-100 transition-colors">
+                            İletişime Geç
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- Footer Section -->
+  <footer style="zoom: 0.8; background-color: #CCDDEA;" class="text-gray-800 py-12">
+    <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Column 1: About & Contact -->
+            <div>
+                <div class="flex items-center mb-6">
+                    <!-- LOGO KALDIRILDI -->
+                    <span style="font-family: 'Aptly', 'Aptly Bold', sans-serif; font-weight: 700;" class="text-xl">Demet Ayaz</span>
+                </div>
+                <p style="font-family: 'Roboto', sans-serif; font-weight: 400;" class="text-gray-700 mb-4">
+                    Tedarik zinciri ve lojistik alanında uzman danışmanlık ve eğitim hizmetleri.
+                </p>
+            </div>
+            
+            <!-- Column 2: Services -->
+            <div>
+                <h3 style="font-family: 'Roboto', sans-serif; font-weight: 700;" class="text-lg mb-6 text-gray-900">Hizmetlerimiz</h3>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="yonetim-danismanligi.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            Yönetim Danışmanlığı
+                        </a>
+                    </li>
+                    <li>
+                        <a href="egitimler.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            Eğitimler
+                        </a>
+                    </li>
+                    <li>
+                        <a href="gonullu-calismalar.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            Gönüllü Çalışmalar
+                        </a>
+                    </li>
+                    
+                </ul>
+            </div>
+            
+            <!-- Column 3: Quick Links -->
+            <div>
+                <h3 style="font-family: 'Roboto', sans-serif; font-weight: 700;" class="text-lg mb-6 text-gray-900">Hızlı Bağlantılar</h3>
+                <ul class="space-y-3">
+                    <li>
+                        <a href="hakkimda.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            Hakkımda
+                        </a>
+                    </li>
+                    <li>
+                        <a href="blog.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">Blog</a>
+                    </li>
+                    <li>
+
+                        <a href="iletisim.html" class="text-gray-700 hover:text-gray-900 transition-colors" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                            İletişim
+                        </a>
+                    </li>
+                   </ul>
+            </div>
+            
+            <!-- İletişim (Sosyal Medya yerine) -->
+            <div>
+                <h4 style="font-family: 'Roboto', sans-serif; font-weight: 500;" class="text-gray-900 mb-3">İletişim</h4>
+                <div class="flex flex-col space-y-2">
+                    <a href="mailto:Ayazd@mef.edu.tr" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                        <i class="fas fa-envelope mr-2 text-blue-600"></i> Ayazd@mef.edu.tr
+                    </a>
+                    <a href="#" class="text-gray-700 hover:text-gray-900 transition-colors flex items-center" style="font-family: 'Roboto', sans-serif; font-weight: 400;">
+                        <i class="fas fa-map-marker-alt mr-2 text-blue-600"></i> İstanbul
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Copyright -->
+        <div class="border-t border-gray-400 mt-10 pt-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p style="font-family: 'Roboto', sans-serif; font-weight: 400;" class="text-gray-700 text-sm text-center w-full">
+                    &copy; 2025 Demet Ayaz. Tüm hakları saklıdır.
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script>
+    // Scroll animation script
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.animate-section');
+            
+            // Initial check on page load
+            checkSections();
+            
+            // Check sections on scroll
+            window.addEventListener('scroll', checkSections);
+            
+            function checkSections() {
+                const triggerBottom = window.innerHeight * 0.85;
+                
+                sections.forEach(section => {
+                    const sectionTop = section.getBoundingClientRect().top;
+                    
+                    if (sectionTop < triggerBottom) {
+                        section.classList.add('visible');
+                    } else {
+                        // Optional: remove the class if you want elements to animate again when scrolling back up
+                        // section.classList.remove('visible');
+                    }
+                });
+            }
+            
+            // Make dropdown menu work with clicks as well
+            const dropdownTrigger = document.querySelector('.dropdown-trigger');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            const navDropdown = document.querySelector('.nav-dropdown');
+            
+            if (dropdownTrigger && dropdownMenu) {
+                // Toggle dropdown on click
+                dropdownTrigger.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    dropdownMenu.classList.toggle('active');
+                });
+                
+                // Close the dropdown when clicking outside of the dropdown area
+                document.addEventListener('click', function(e) {
+                    if (!navDropdown.contains(e.target)) {
+                        dropdownMenu.classList.remove('active');
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+<script src="js/mobile-menu.js" defer></script>
+</html>
