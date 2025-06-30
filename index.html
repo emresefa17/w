@@ -91,30 +91,21 @@
         <img src="demetbanner.jpg" 
              alt="San Francisco skyline with clock tower" 
              class="hero-image">
-        <!-- Text overlay -->
+        <!-- Text overlay LEFT -->
+        <div class="hero-overlay hero-overlay-left" id="hero-overlay-left">
+            <h1 class="hero-title" id="hero-title-left" data-text="Tedarik zincirini birlikte dönüştürüyoruz." style="font-size:1.7rem;font-family:'Roboto',sans-serif;font-weight:700;"></h1>
+            <p class="hero-description" id="hero-desc-left" data-text="Net çözümler kurguluyor ve uygulamaya dönük eğitimlerle her adımda fark yaratıyoruz." style="font-size:1.25rem;font-family:'Roboto',sans-serif;font-weight:400;"></p>
+        </div>
+        <!-- Text overlay RIGHT (or original) -->
         <div class="hero-overlay">
-            <h1 class="hero-title" id="hero-title" data-text="Tedarik zincirini birlikte dönüştürüyoruz."></h1>
-            <p class="hero-description" id="hero-desc" data-text="Net çözümler kurguluyor ve uygulamaya dönük eğitimlerle her adımda fark yaratıyoruz."></p>
+            <h1 class="hero-title" id="hero-title" data-text="Tedarik Zinciri ve Lojistik Alanında Uzman Danışmanlık Hizmetleri" style="font-size:1.7rem;font-family:'Roboto',sans-serif;font-weight:700;"></h1>
+           
+            <div id="hero-subtitle" data-text="15 Yıllık Uluslararası Deneyim ve Uzmanlık" style="font-size:1.25rem;font-family:'Roboto',sans-serif;font-weight:400;letter-spacing:0.08em;text-transform:uppercase;color:#333;"></div>
         </div>
     </section>
 
     <!-- demett Section -->
-    <section class="demett-section bg-white animate-section animate-fade">
-        <div class="container mx-auto px-6 flex flex-col lg:flex-row items-start justify-between">
-            <!-- Left Text Content -->
-            <div style="zoom: 70%;" class="mb-10 lg:mb-0 lg:w-1/2 lg:pr-16 animate-section animate-left animate-delay-200">
-                <h2 class="demett-heading" id="demett-title" data-text="Tedarik Zinciri ve Lojistik Alanında Uzman Danışmanlık Hizmetleri" style="font-family: 'Roboto', sans-serif; font-weight: 700;"></h2>
-            </div>
-            
-            <!-- Right Stat Counter -->
-            <div style="zoom: 90%;" class="lg:w-1/2 text-right animate-section animate-right animate-delay-400">
-                <div class="mb-1">
-                    <span class="demett-number" style="font-family: 'Roboto', sans-serif; font-weight: 700;">15+</span>
-                </div>
-                <p id="demett-subtitle" class="demett-subtitle" data-text="YILLIK ULUSLARARASI DENEYİM VE UZMANLIK" style="font-family: 'Roboto', sans-serif; font-weight: 500;"></p>
-            </div>
-        </div>
-    </section>
+ 
 
     <!-- HAKKIMDA Section (replacing Q1 Financial Report) -->
     <section class="financial-report-section animate-section animate-fade">
@@ -246,7 +237,7 @@
                   </p>
                     </div>
               <div class="md:w-1/3 text-center">
-                  <img src="logo-tr.svg" alt="Logo" style="height:90px;width:auto;margin:0 auto 12px auto;display:block;" />
+                  <img src="da.jpg" alt="Logo" style="height:120px;width:auto;margin:0 auto 12px auto;display:block;" />
                   <a href="https://www.darussafaka.org/bagis/genel-bagis" class="inline-block bg-white text-blue-600 font-medium py-3 px-6 rounded-full hover:bg-blue-100 transition-colors" target="_blank">
                       Bağış Yap
                   </a>
@@ -268,7 +259,7 @@
                         <span style="font-family: 'Aptly', 'Aptly Bold', sans-serif; font-weight: 700;" class="text-xl">Demet Ayaz</span>
                     </div>
                     <p style="font-family: 'Roboto', sans-serif; font-weight: 400;" class="text-gray-700 mb-4">
-                        Tedarik zinciri ve lojistik alanında uzman danışmanlık ve eğitim hizmetleri.
+                        Tedarik Zinciri ve Lojistik Alanında Uzman Danışmanlık ve Eğitim Hizmetleri.
                     </p>
                 </div>
                 
@@ -405,15 +396,77 @@
         typing();
       }
       document.addEventListener('DOMContentLoaded', function() {
-        // Hero
+        // Hero LEFT (soldaki kutu önce başlar)
+        const overlayLeft = document.getElementById('hero-overlay-left');
+        const titleElLeft = document.getElementById('hero-title-left');
+        const descElLeft = document.getElementById('hero-desc-left');
+        const titleTextLeft = titleElLeft ? titleElLeft.getAttribute('data-text') : null;
+        const descTextLeft = descElLeft ? descElLeft.getAttribute('data-text') : null;
+        // Hero RIGHT (sağdaki kutu)
         const titleEl = document.getElementById('hero-title');
-        const descEl = document.getElementById('hero-desc');
+        const subtitleEl = document.getElementById('hero-subtitle');
         const titleText = titleEl ? titleEl.getAttribute('data-text') : null;
-        const descText = descEl ? descEl.getAttribute('data-text') : null;
-        if (titleEl && titleText) {
-          typeWriter(titleEl, titleText, 40, function() {
+        const subtitleText = subtitleEl ? subtitleEl.getAttribute('data-text') : null;
+        // Soldaki animasyon bitince sağdaki başlasın (mobilde soldaki gizlenecek)
+        if (titleElLeft && titleTextLeft) {
+          typeWriter(titleElLeft, titleTextLeft, 40, function() {
             setTimeout(function() {
-              if (descEl && descText) typeWriter(descEl, descText, 18);
+              if (descElLeft && descTextLeft) {
+                typeWriter(descElLeft, descTextLeft, 18, function() {
+                  // Soldaki tamamen bitince sağdaki başlasın
+                  // Eğer mobildeysek soldaki kutuyu 2.5 saniye sonra gizle
+                  if (window.innerWidth <= 1024 && overlayLeft) {
+                    setTimeout(function() {
+                      overlayLeft.style.display = 'none';
+                      if (window.innerWidth <= 1024) {
+                        const rightOverlay = document.querySelector('.hero-overlay:not(.hero-overlay-left)');
+                        if (rightOverlay) rightOverlay.style.display = 'block';
+                      }
+                      if (titleEl && titleText) {
+                        typeWriter(titleEl, titleText, 40, function() {
+                          setTimeout(function() {
+                            if (subtitleEl && subtitleText) typeWriter(subtitleEl, subtitleText, 18);
+                          }, 400);
+                        });
+                      }
+                    }, 2500);
+                  } else {
+                    if (titleEl && titleText) {
+                      typeWriter(titleEl, titleText, 40, function() {
+                        setTimeout(function() {
+                          if (subtitleEl && subtitleText) typeWriter(subtitleEl, subtitleText, 18);
+                        }, 400);
+                      });
+                    }
+                  }
+                });
+              } else {
+                // Sadece başlık varsa yine sağa geç
+                if (window.innerWidth <= 1024 && overlayLeft) {
+                  setTimeout(function() {
+                    overlayLeft.style.display = 'none';
+                    if (window.innerWidth <= 1024) {
+                      const rightOverlay = document.querySelector('.hero-overlay:not(.hero-overlay-left)');
+                      if (rightOverlay) rightOverlay.style.display = 'block';
+                    }
+                    if (titleEl && titleText) {
+                      typeWriter(titleEl, titleText, 40, function() {
+                        setTimeout(function() {
+                          if (subtitleEl && subtitleText) typeWriter(subtitleEl, subtitleText, 18);
+                        }, 400);
+                      });
+                    }
+                  }, 2500);
+                } else {
+                  if (titleEl && titleText) {
+                    typeWriter(titleEl, titleText, 40, function() {
+                      setTimeout(function() {
+                        if (subtitleEl && subtitleText) typeWriter(subtitleEl, subtitleText, 18);
+                      }, 400);
+                    });
+                  }
+                }
+              }
             }, 400);
           });
         }
